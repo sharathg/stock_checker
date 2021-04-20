@@ -1,8 +1,14 @@
+schedules:
+- cron: "0/15 * * * *"
+  displayName: Run Every 15 mins
+  branches:
+    include:
+    - main
+
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
 - bash: pip install -r requirements.txt
   displayName: 'Install Requirements'
 
