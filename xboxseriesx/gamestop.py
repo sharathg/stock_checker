@@ -16,7 +16,8 @@ class GameStop:
         status = "true"
         if not cart.is_displayed():
             status = "false"
-            self.logger.info(self.browser.find_element_by_class_name("buyDisabled").text)
+            unavailable = self.browser.find_element_by_class_name("buyDisabled")
+            self.logger.info(self.store, ":", unavailable.text)
         if status != self.pre_status:
             self.update_status(status)
 

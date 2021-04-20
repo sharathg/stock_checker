@@ -16,7 +16,7 @@ class Saturn:
         status = "true"
         if not cart:
             unavailable = self.browser.find_element_by_xpath("//div[@data-test='pdp-product-not-available']")
-            self.logger.info(unavailable.text)
+            self.logger.info(self.store, ":", unavailable.text)
             status = "false"
         if status != self.pre_status:
             self.update_status(status)
