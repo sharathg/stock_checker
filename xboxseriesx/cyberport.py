@@ -16,7 +16,7 @@ class Cyberport:
         cart = self.browser.find_elements_by_xpath("//article[contains(@data-product-name, 'Xbox Series X')]")
         if not cart:
             status = "false"
-            self.logger.info(self.store, ":", "Not available")
+            self.logger.info(self.store + " : " + "Not available")
         if status != self.pre_status:
             self.update_status(status)
 
