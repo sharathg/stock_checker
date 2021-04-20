@@ -1,0 +1,10 @@
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+- bash: pip install -r requirements.txt
+  displayName: 'Install Requirements'
+
+- bash: python checker.py
+  displayName: 'Run Stock Checker'
